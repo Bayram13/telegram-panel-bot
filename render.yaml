@@ -1,6 +1,2 @@
-services:
-  - type: web
-    name: telegram-bot
-    env: python
-    buildCommand: ''
-    startCommand: python main.py
+python-telegram-bot
+python-dotenv
