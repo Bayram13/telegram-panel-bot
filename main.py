@@ -579,12 +579,12 @@ def main() -> None:
     # Botu davamlı dinlə
     if WEBHOOK_URL:
         logger.info(f"Setting up webhook for URL: {WEBHOOK_URL}")
-        application.run_webhook(
-            listen="0.0.0.0",
-            port=PORT,
-            url_path=config.BOT_TOKEN,
-            webhook_url=WEBHOOK_URL + config.BOT_TOKEN
-        )
+       application.run_webhook(
+           listen="0.0.0.0",
+           port=int(os.environ.get("PORT", "8443")),
+           url_path=config.BOT_TOKEN, # Telegram-ın bot tokeni ilə gələn müraciətləri tanımalıdır
+           webhook_url=f"{WEBHOOK_URL}{config.BOT_TOKEN}" # Düzgün URL birləşməsi
+)
     else:
         logger.info("WEBHOOK_URL not set, running in polling mode (for local development or debugging).")
         application.run_polling(allowed_updates=Update.ALL_TYPES)
