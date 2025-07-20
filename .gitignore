@@ -1,0 +1,7 @@
+.env
+bot_data.db
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.DS_Store
