@@ -1,8 +1,9 @@
+# config.py
 import os
 from dotenv import load_dotenv
 
-# .env faylını yüklə
+# .env faylını yüklə (yerli inkişaf üçün)
 load_dotenv()
 
-BOT_TOKEN = os.getenv("8024553112:AAHacfh8tTrzAre3Tc-EHV9bKsjylo43JiI")
-ADMIN_ID = int(os.getenv("5490094790"))
+BOT_TOKEN = os.getenv("BOT_TOKEN") # Bu sətri də yoxlayın, düzgün adlı dəyişəndən oxuduğundan əmin olun
+ADMIN_ID = int(os.getenv("ADMIN_ID")) # Düzgün ətraf mühit dəyişəni adı olaraq "ADMIN_ID" istifadə edin
